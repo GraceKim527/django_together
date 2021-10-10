@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import KangBlog, KangComment
 
-# Register your models here.
+admin.site.register(KangBlog)
+admin.site.register(KangComment)
