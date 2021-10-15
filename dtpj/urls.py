@@ -25,4 +25,7 @@ urlpatterns = [
     #path('song/',  include('song.urls')),
     #path('kang/',  include('kang.urls')),
     path('', main.views.main, name = 'main'),
+    path('register/', main.views.register, name='register'),
+    path('login/', main.views.login, name='login'),
+    path('logout/', main.views.logout, name='logout'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
