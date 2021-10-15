@@ -6,7 +6,8 @@ from .forms import CreateForm, CommentForm
 # Create your views here.
 def kimmain(request): #main
     blog = Gram.objects
-    return render(request, 'kim/kimmain.html', {'blog':blog})
+    c_form = CommentForm()
+    return render(request, 'kim/kimmain.html', {'blog':blog, 'c_form': c_form})
 
 def kimnew(request):
     return render(request, 'kim/kimnew.html')
@@ -21,7 +22,7 @@ def kimnew(request):
 
 def kimcreate(request):
     if request.method == 'POST':
-        form = CreateForm(request.POST)
+        form = CreateForm(request.POST, request.FILES)
         if form.is_valid():
             form = form.save(commit=False)
             form.pub_date = timezone.now()
@@ -58,7 +59,7 @@ def kimcomment(request, id):
             comment.blog_id = blog
             comment.text = form.cleaned_data['text']
             comment.save()
-            return redirect('kimmain',id)
-    else:
+            return redirect('kimmain')
+    else: 
         form = CommentForm()
-        return render(request, 'kim/kimmain.html', {'blog':blog, 'form':form})    
+        return render(request, 'kim/kimmain.html', {'blog':blog, 'form':form}) 

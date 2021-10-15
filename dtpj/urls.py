@@ -16,11 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import main.views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('kim/',  include('kim.urls')),
+<<<<<<< HEAD
     path('song/',  include('song.urls')),
     path('kang/',  include('kang.urls')),
+=======
+    #path('song/',  include('song.urls')),
+    #path('kang/',  include('kang.urls')),
+>>>>>>> e5da945c274a1e6b5ee950b06533ea4c6e626b44
     path('', main.views.main, name = 'main'),
-]
+    path('register/', main.views.register, name='register'),
+    path('login/', main.views.login, name='login'),
+    path('logout/', main.views.logout, name='logout'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

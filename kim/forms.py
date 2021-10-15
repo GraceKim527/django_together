@@ -3,7 +3,7 @@ from .models import Gram, Gram_Comment
 class CreateForm(forms.ModelForm):
     class Meta:
         model = Gram
-        fields = ['title', 'writer', 'body']
+        fields = ['title', 'writer', 'body', 'image']
 
 class CommentForm(forms.ModelForm):
     class Meta:
