@@ -5,6 +5,10 @@
     <p> {{ blog.writer }}</p>
     <p>{{ blog.pub_date }}</p>
     <h2>{{ blog.body }}</h2>
+    {% if blog.image %}
+        <img src="{{ blog.image.url }}" width="250" height="250" alt="Card image cap">
+    {% endif %}
+    <br>
     <a href="{% url 'kimedit' blog.id %}">수정</a>
     <a href="{% url 'kimdelete' blog.id %}">삭제</a>
     <br><br><br>

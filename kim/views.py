@@ -22,7 +22,7 @@ def kimnew(request):
 
 def kimcreate(request):
     if request.method == 'POST':
-        form = CreateForm(request.POST)
+        form = CreateForm(request.POST, request.FILES)
         if form.is_valid():
             form = form.save(commit=False)
             form.pub_date = timezone.now()
