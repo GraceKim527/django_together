@@ -1,0 +1,26 @@
+<section class="page-section" id="services">
+    <div class="container px-4 px-lg-5">
+        <br><br>
+        <h2 class="text-center mt-0">제목 : {{ blog.title }}</h2>
+        <hr class="divider" />
+        <p>작성일 : {{ blog.pub_date }}</p>
+        <p>내용 : {{ blog.content }}</p>
+        {% if blog.image %}
+            <img src="{{ blog.image.url }}" width="250" height="250" alt="Card image cap">
+        {% endif %}
+        <br>
+        <a href="{% url 'song_edit' blog.id %}">수정하기</a>
+        <a href="{% url 'song_delete' blog.id %}">삭제하기</a>
+        <br>
+        <br>
+        <h2>댓글</h2>
+        {% for comment in blog.comments.all %}
+        <p>{{comment.text}}</p>
+        {% endfor %}
+        <form method="POST" action="{% url 'song_detail' blog.id %}">
+            {% csrf_token %}
+            <p>{{ form.as_p }}</p>
+            <input type="submit" value="작성">
+        </form>
+    </div>
+</section>
