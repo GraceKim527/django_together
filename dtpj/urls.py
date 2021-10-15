@@ -19,14 +19,8 @@ import main.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
     path('kim/',  include('kim.urls')),
-    #path('song/',  include('song.urls')),
-    path('kang/',  include('kang.urls')),
-=======
-    #path('',  include('kim.urls')),
     path('song/',  include('song.urls')),
-    #path('',  include('kang.urls')),
->>>>>>> 9c8153ee1c1eee7ef0347c41bc4b64fa38bc545a
+    path('kang/',  include('kang.urls')),
     path('', main.views.main, name = 'main'),
 ]
