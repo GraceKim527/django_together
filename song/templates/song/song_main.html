@@ -1,0 +1,18 @@
+<div class="row gx-4 gx-lg-5 justify-content-center">
+    <section id="services">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0"></h2>
+            <hr class="divider" />
+            <h1><a href="{% url 'song_create' %}">작성</a></h1>
+            {% for blogs in blogs.all %}
+            <h1>제목 :<a href="{% url 'song_detail' blogs.id %}">{{ blogs.title }}</a></h1>
+            <p>작성 일: {{ blogs.pub_date }}</p>
+            {% if blogs.image %}
+                <img src="{{ blogs.image.url }}" width="250" height="250" alt="Card image cap">
+            {% endif %}
+            <br>
+            <br>
+            {% endfor %}
+          </div>
+    </section>
+</div>
