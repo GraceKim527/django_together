@@ -1,33 +1,274 @@
+@font-face {
+    font-family: '116watermelon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/116watermelon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IM_Hyemin-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF_HailSnow';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HailSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url("https://ak.picdn.net/shutterstock/videos/14303281/thumb/3.jpg");
+    background-size: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 400px 300px 300px 300px 400px;
+    grid-template-rows: 100px 220px 220px 220px 100px;
+    /* row-gap: 10px; 행과 행 사이의 간격(Line)을 정의
+    column-gap: 10px; 열과 열 사이의 간격(Line)을 정의 */
+    gap: 30px;
+
+    border-radius: 10%;
+    
+    font-size:90px;
+
+    justify-self: center;
+
+    position: relative;
+
+    width: 300px;
+    height: 220px;
+
+    justify-self: center;
+}
+
+#together{
+    grid-column: 3;
+	grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'ghanachoco';
+    
+    background-color:rgb(255, 233, 209);
+    border: 5px outset rgb(240, 145, 38);
+    
+    color: rgb(102, 159, 206);
+    text-shadow: 3px 3px rgb(240, 145, 38);
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#together:hover {
+    transform: scale(1.1);
+}
+
+#login1{
+    grid-column: 2;
+	grid-row: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'ghanachoco';
+    font-size: 70px;
+    
+    background-color:rgb(223, 236, 175);
+    border: 5px outset rgb(128, 206, 4);
+
+    color: rgb(148, 48, 241);
+    text-shadow: 3px 3px rgb(128, 206, 4);
+    /* font-weight: bolder; */
+
+    position: absolute;
+    left: 172.5px;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#login2{
+    grid-column: 2;
+	grid-row: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'ghanachoco';
+    font-size: 70px;
+    
+    background-color:rgb(223, 236, 175);
+    border: 5px outset rgb(128, 206, 4);
+
+    color: rgb(148, 48, 241);
+    text-shadow: 3px 3px rgb(128, 206, 4);
+    /* font-weight: bolder; */
+
+    position: absolute;
+    left: 172.5px;
+
+    text-decoration: none;
+}
+
+#login1:hover {
+    transform: scale(1.1);
+}
+
+#signin{
+    grid-column: 4;
+	grid-row: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'ghanachoco';
+    font-size: 70px;
+
+    background-color:rgb(223, 236, 175);
+    border: 5px outset rgb(128, 206, 4);
+
+    color: rgb(148, 48, 241);
+    text-shadow: 3px 3px rgb(128, 206, 4);
+
+    position: absolute;
+    /* 얜 right: 152.5px;를 안쓴 이유가 login의 left값만큼 얘에게도 영향이 가서 
+    gap을 지키기 위해 자동으로 딸려가나봄... 얜 따로 값을 줄 필요가 없는듯...*/
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#signin:hover {
+    transform: scale(1.1);
+}
+
 #kang {
-    background-color:black;
-    width:150px; height:150px;
-    border-radius:75px;
-    text-align:center;
-    margin:0 auto;
-    font-size:12px;
-    vertical-align:middle;
-    line-height:150px;
+    grid-column: 3;
+	grid-row: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: '116watermelon';
     color: rgb(255, 197, 37);
+    
+    background-color:black;
+    border: 5px outset rgb(255, 197, 37);
+
+    cursor: pointer;
+    text-decoration: none;
 }
 
-#Song {
+#kang:hover {
+    /* z-index: 3; 각 객체가 조금이라도 겹치는 경우 이걸로 순서 정해주는겨, 숫자 클수록 앞이란다. */
+    transform: scale(1.1);
+}
+
+#song {
+    grid-column: 2;
+	grid-row: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Cafe24SsurroundAir';
+    color: rgb(181, 241, 243);
+    
     background-color:#191970;
-    width:100px; height:100px;
-    border-radius:75px;
-    text-align:center;
-    margin:0 auto;
-    font-size:12px; color:#fff;
-    vertical-align:middle;
-    line-height:100px;
+    border: 5px outset rgb(181, 241, 243);
+    
+    cursor: pointer;
+    text-decoration: none;
 }
 
-#Song {
-    background-color:#0009;
-    width:100px; height:100px;
-    border-radius:75px;
-    text-align:center;
-    margin:0 auto;
-    font-size:12px; color:#fff;
-    vertical-align:middle;
-    line-height:100px;
+#song:hover {
+    transform: scale(1.1);
+}
+
+#kim {
+    grid-column: 4;
+	grid-row: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'IM_Hyemin-Regular';
+    color: rgb(255, 255, 255);
+    
+    background-color:rgb(201, 108, 193);
+    border: 5px outset rgb(255, 255, 255);
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#kim:hover {
+    transform: scale(1.1);
+}
+
+/* modal */
+#modal.modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.432);
+}
+
+#modal .modal-window {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.664);
+    border-radius: 10px;
+    width: 600px;
+    height: 750px;
+    position: relative;
+    padding: 10px;
+    padding-left: 60px;
+}
+
+#modal .close-area {
+    width : 30px;
+    height: 30px;
+    text-align: center;
+    background-color: red;
+    color : white ;
+    float : right;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#modal .content {
+    margin-top: 20px;
 }

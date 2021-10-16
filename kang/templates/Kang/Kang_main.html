@@ -3,7 +3,7 @@
         <div class="container px-4 px-lg-5">
             <h2 class="text-center mt-0"></h2>
             <hr class="divider" />
-            <h1><a href="{% url 'Kang_create' %}">Write</a></h1>
+            <h1><a href="{% url 'Kang_create' %}">글쓰기</a></h1>
             {% for blogs in blogs.all %}
             <h1>제목 :<a href="{% url 'Kang_detail' blogs.id %}">{{ blogs.title }}</a></h1>
             <p>작성 일자 및 시간 : {{ blogs.pub_date }}</p>

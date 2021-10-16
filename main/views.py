@@ -35,3 +35,6 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('main')
+
+def modal(request):
+    return render(request, 'modal.html')
