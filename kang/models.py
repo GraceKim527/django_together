@@ -21,3 +21,4 @@ class KangComment(models.Model):
 
     post_id = models.ForeignKey(KangBlog, on_delete=models.CASCADE, related_name='comments')
     text = models.CharField(max_length=50)
+    parent_comment = models.ForeignKey('self', on_delete=models.CASCADE, null=True) 

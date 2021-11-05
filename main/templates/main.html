@@ -44,8 +44,8 @@
     <div class="container">
         <a href="#" onclick="change()" class="container" id="together" style="cursor: pointer">어울림</a>
         {% if user.is_active %}
-        <a class="container" id="login2" style="font-size: 40px;">{{ user.username }}</a>
-        <a class="container" id="signin" href="{% url 'logout' %}">로그아웃</a>
+        <a class="container" id="signin2" href="{% url 'logout' %}">로그아웃</a>
+        <a class="container" id="login2">{{ user.username }}</a>
 
         <a href="{% url 'Kang_main' %}" class="container" id="kang" onmouseover="over(kim), over(song)"
             onmouseout="out(kim), out(song)">
@@ -61,9 +61,23 @@
         </a>
 
         {% else %}
+        <p class="container" id="hello">회원가입 후, 로그인을 해주세요!!</p>
         <a class="container" id="login1" style="text-decoration: none;" href="{% url 'login' %}">로그인</a>
-        <a class="container" id="signin" style="text-decoration: none;" href="{% url 'register' %}">회원가입</a>
+        <a class="container" id="signin1" style="text-decoration: none;" href="{% url 'register' %}">회원가입</a>
         {% endif %}
+
+        <p class="container" id="Delete">Delete</p>
+        <p class="container" id="Insert">Insert</p>
+        <p class="container" id="PrtSc">PrtSc<br>ScrLk</p>
+        <p class="container" id="F12">F12</p>
+        <p class="container" id="F11">F11</p>
+        <p class="container" id="key1">-<br>_</p>
+        <p class="container" id="key2">&nbsp;)<br>0</p>
+        <p class="container" id="key3">&nbsp;|<br>₩</p>
+        <p class="container" id="Enter">↲ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enter</p>
+        <p class="container" id="key4">"<br>'</p>
+        <p class="container" id="key5">:<br>;</p>
+        <p class="container" id="L">&nbsp;L<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅣ</p>
     </div>
     <div id="modal" class="modal-overlay">
         <div class="modal-window">

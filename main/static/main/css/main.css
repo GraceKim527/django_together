@@ -6,15 +6,14 @@
 }
 
 @font-face {
-    font-family: 'Cafe24SsurroundAir';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-    font-family: 'IM_Hyemin-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
+    font-family: 'CWDangamAsac-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -27,65 +26,96 @@
 }
 
 @font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SBAggroM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'ghanachoco';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-body {
-    background-image: url("https://ak.picdn.net/shutterstock/videos/14303281/thumb/3.jpg");
-    background-size: 100%;
-}
-
 .container {
     display: grid;
-    grid-template-columns: 400px 300px 300px 300px 400px;
-    grid-template-rows: 100px 220px 220px 220px 100px;
+    grid-template-columns: 200px 300px 300px 300px 300px 200px;
+    grid-template-rows: 50px 150px 200px 200px 200px 200px 100px;
     /* row-gap: 10px; 행과 행 사이의 간격(Line)을 정의
     column-gap: 10px; 열과 열 사이의 간격(Line)을 정의 */
     gap: 30px;
 
     border-radius: 10%;
     
-    font-size:90px;
+    font-size: 70px;
 
     justify-self: center;
 
     position: relative;
 
-    width: 300px;
-    height: 220px;
+    width: 260px;
+    height: 160px;
 
     justify-self: center;
 }
 
+#hello{
+    grid-column: 2;/*가로 위치*/
+	grid-row: 4;/*세로 위치*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'SBAggroM';
+    font-size: 55px;
+
+    left: 330px;
+    bottom: 20px;
+
+    width: 840px;
+    height: 160px;
+}
+
 #together{
-    grid-column: 3;
-	grid-row: 2;
+    grid-column: 5;
+	grid-row: 4;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     font-family: 'ghanachoco';
-    
-    background-color:rgb(255, 233, 209);
-    border: 5px outset rgb(240, 145, 38);
-    
-    color: rgb(102, 159, 206);
-    text-shadow: 3px 3px rgb(240, 145, 38);
+    font-size: 60px;
+    color: rgb(148, 48, 241);
+    text-shadow: 3px 3px rgb(128, 206, 4);
+
+    background-color:rgb(223, 236, 175);
+    border: 20px outset rgb(128, 206, 4);
 
     text-decoration: none;
     cursor: pointer;
+}
+
+#together:visited {
+    color: rgb(148, 48, 241);
 }
 
 #together:hover {
     transform: scale(1.1);
 }
 
-#login1{
-    grid-column: 2;
+#signin1{
+    grid-column: 5;
 	grid-row: 3;
 
     display: flex;
@@ -93,51 +123,35 @@ body {
     justify-content: center;
 
     font-family: 'ghanachoco';
-    font-size: 70px;
-    
-    background-color:rgb(223, 236, 175);
-    border: 5px outset rgb(128, 206, 4);
-
+    font-size: 60px;
     color: rgb(148, 48, 241);
     text-shadow: 3px 3px rgb(128, 206, 4);
+    
+    background-color:rgb(223, 236, 175);
+    border: 20px outset rgb(128, 206, 4);
+
     /* font-weight: bolder; */
 
     position: absolute;
-    left: 172.5px;
+    right: -300px;
+
+    width: 460px;
+    height: 160px;
+    border-radius: 5%;
 
     text-decoration: none;
     cursor: pointer;
 }
 
-#login2{
-    grid-column: 2;
-	grid-row: 3;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: 'ghanachoco';
-    font-size: 70px;
-    
-    background-color:rgb(223, 236, 175);
-    border: 5px outset rgb(128, 206, 4);
-
+#signin1:visited {
     color: rgb(148, 48, 241);
-    text-shadow: 3px 3px rgb(128, 206, 4);
-    /* font-weight: bolder; */
-
-    position: absolute;
-    left: 172.5px;
-
-    text-decoration: none;
 }
 
-#login1:hover {
+#signin1:hover {
     transform: scale(1.1);
 }
 
-#signin{
+#signin2{
     grid-column: 4;
 	grid-row: 3;
 
@@ -146,15 +160,15 @@ body {
     justify-content: center;
 
     font-family: 'ghanachoco';
-    font-size: 70px;
-
-    background-color:rgb(223, 236, 175);
-    border: 5px outset rgb(128, 206, 4);
-
+    font-size: 50px;
     color: rgb(148, 48, 241);
     text-shadow: 3px 3px rgb(128, 206, 4);
 
+    background-color:rgb(223, 236, 175);
+    border: 20px outset rgb(128, 206, 4);
+
     position: absolute;
+    right: -100px;
     /* 얜 right: 152.5px;를 안쓴 이유가 login의 left값만큼 얘에게도 영향이 가서 
     gap을 지키기 위해 자동으로 딸려가나봄... 얜 따로 값을 줄 필요가 없는듯...*/
 
@@ -162,7 +176,77 @@ body {
     cursor: pointer;
 }
 
-#signin:hover {
+#signin2:visited {
+    color: rgb(148, 48, 241);
+}
+
+#signin2:hover {
+    transform: scale(1.1);
+}
+
+#login2{
+    grid-column: 5;
+	grid-row: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'ghanachoco';
+    font-size: 50px;
+    color: rgb(148, 48, 241);
+    text-shadow: 3px 3px rgb(128, 206, 4);
+    
+    background-color:rgb(223, 236, 175);
+    border: 20px outset rgb(128, 206, 4);
+
+    /* font-weight: bolder; */
+
+    position: absolute;
+    right: -300px;
+
+    width: 460px;
+    height: 160px;
+    border-radius: 5%;
+
+    text-decoration: none;
+    /*얘는 클릭할 필요가 없으니 cursor: pointer;를 없애서 hover을 없앰*/
+}
+
+#login2:visited {
+    color: rgb(148, 48, 241);
+}
+
+#login1{
+    grid-column: 4;
+	grid-row: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'ghanachoco';
+    font-size: 60px;
+    color: rgb(148, 48, 241);
+    text-shadow: 3px 3px rgb(128, 206, 4);
+
+    background-color:rgb(223, 236, 175);
+    border: 20px outset rgb(128, 206, 4);
+
+    position: absolute;
+    right: -100px;
+    /* 얜 right: 152.5px;를 안쓴 이유가 login의 left값만큼 얘에게도 영향이 가서 
+    gap을 지키기 위해 자동으로 딸려가나봄... 얜 따로 값을 줄 필요가 없는듯...*/
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#login1:visited {
+    color: rgb(148, 48, 241);
+}
+
+#login1:hover {
     transform: scale(1.1);
 }
 
@@ -175,10 +259,10 @@ body {
     justify-content: center;
 
     font-family: '116watermelon';
-    color: rgb(255, 197, 37);
+    color: black;
     
-    background-color:black;
-    border: 5px outset rgb(255, 197, 37);
+    background-color: rgb(253, 220, 130);
+    border: 20px outset rgb(255, 197, 37);
 
     cursor: pointer;
     text-decoration: none;
@@ -197,11 +281,11 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-family: 'Cafe24SsurroundAir';
-    color: rgb(181, 241, 243);
+    font-family: 'Vitro_core';
+    color:#191970;
     
-    background-color:#191970;
-    border: 5px outset rgb(181, 241, 243);
+    background-color:#f8ae60;
+    border: 20px outset #ff8400;
     
     cursor: pointer;
     text-decoration: none;
@@ -219,11 +303,11 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-family: 'IM_Hyemin-Regular';
-    color: rgb(255, 255, 255);
+    font-family: 'CWDangamAsac-Bold';
+    color: #5B5759;
     
-    background-color:rgb(201, 108, 193);
-    border: 5px outset rgb(255, 255, 255);
+    background-color:#ffdade;
+    border: 20px outset #FFB1B9;
 
     cursor: pointer;
     text-decoration: none;
@@ -271,4 +355,248 @@ body {
 
 #modal .content {
     margin-top: 20px;
+}
+
+#Delete{
+    grid-column: 5;
+	grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    width: 260px;
+    height: 110px;
+
+    bottom: 50px;
+}
+
+#Insert{
+    grid-column: 4;
+	grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    width: 260px;
+    height: 110px;
+
+    bottom: 50px;
+}
+
+#PrtSc{
+    grid-column: 3;
+	grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    width: 260px;
+    height: 110px;
+
+    bottom: 50px;
+}
+
+#F12{
+    grid-column: 2;
+	grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    width: 260px;
+    height: 110px;
+
+    bottom: 50px;
+}
+
+#F11{
+    grid-column: 1;
+	grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    width: 260px;
+    height: 110px;
+
+    bottom: 50px;
+    right: 50px/*css 마지막에는 ;을 꼭 안붙여도 됨*/
+}
+
+#key1{
+    grid-column: 3;
+	grid-row: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    bottom: 50px;
+    right: 200px;
+}
+
+#key2{
+
+    grid-column: 2;
+	grid-row: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    bottom: 50px;
+    right: 200px;
+}
+
+#key3{
+    grid-column: 1;
+	grid-row: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    bottom: 50px;
+    right: 50px;
+}
+
+#Enter{
+    grid-column: 5;
+	grid-row: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    bottom: 50px;
+    right: 100px;
+
+    width: 460px;
+    height: 160px;
+    border-radius: 5%;
+}
+
+#key4{
+    grid-column: 4;
+	grid-row: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    bottom: 50px;
+    right: 200px;
+}
+
+#key5{
+    grid-column: 2;
+	grid-row: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    bottom: 50px;
+    left: 130px;
+}
+
+#L{
+    grid-column: 1;
+	grid-row: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 50px;
+    color: rgb(101, 101, 101);
+    
+    background-color:rgb(214, 212, 212);
+    border: 20px outset rgb(185, 185, 185);
+
+    bottom: 50px;
+    left: 80px;
 }
