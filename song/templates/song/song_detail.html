@@ -9,9 +9,14 @@
             <img src="{{ blog.image.url }}" width="250" height="250" alt="Card image cap">
         {% endif %}
         <br>
+        {% for hashtag in blog.hashtags.all %}
+            <span>{{ hashtag.name }}</span>
+        {% endfor %}
+        <br>
+        <hr>
+        <br>
         <a href="{% url 'song_edit' blog.id %}">수정하기</a>
         <a href="{% url 'song_delete' blog.id %}">삭제하기</a>
-        <br>
         <br>
         <h2>댓글</h2>
         {% for comment in blog.comments.all %}
